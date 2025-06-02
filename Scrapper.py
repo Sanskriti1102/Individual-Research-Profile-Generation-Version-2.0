@@ -1,6 +1,7 @@
 import streamlit as st
 import openpyxl
 import logging
+from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -27,7 +28,8 @@ class GoogleScholarScraper:
         options.add_argument('--disable-dev-shm-usage')
         options.binary_location = '/usr/bin/chromium-browser'
 
-        self.driver = Chrome(executable_path='/usr/bin/chromedriver', options=options)
+        service = Service('/usr/bin/chromedriver')  # <-- Here’s the new way
+        self.driver = Chrome(service=service, options=options)
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 10)
 
