@@ -1,9 +1,7 @@
 import streamlit as st
 import openpyxl
 import logging
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver import Chrome, ChromeOptions
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -27,10 +25,9 @@ class GoogleScholarScraper:
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
-        # No need to set binary location if you have Chrome installed normally
+        options.binary_location = '/usr/bin/chromium-browser'
 
-        service = Service(ChromeDriverManager().install())
-        self.driver = Chrome(service=service, options=options)
+        self.driver = Chrome(executable_path='/usr/bin/chromedriver', options=options)
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 10)
 
