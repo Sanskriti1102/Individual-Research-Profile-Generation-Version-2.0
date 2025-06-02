@@ -25,12 +25,9 @@ class GoogleScholarScraper:
         options.add_argument('--headless')
         options.add_argument('--no-sandbox')
         options.add_argument('--disable-dev-shm-usage')
-        options.binary_location = '/usr/bin/chromium-browser'
-
-        self.driver = Chrome(executable_path='/usr/bin/chromedriver', options=options)
+        self.driver = Chrome(options=options)
         self.driver.maximize_window()
         self.wait = WebDriverWait(self.driver, 10)
-
 
     def teardown_driver(self):
         if self.driver:
@@ -92,12 +89,12 @@ def fetch_scholar_id(professor_name, excel_path):
 
 
 # --- Streamlit UI ---
-st.title("Google Scholar Academic Profile Scraper")
+st.title("Google Scholar Profile Scraper")
 
 uploaded_file = st.file_uploader("Upload Excel with Professors (Name, Scholar ID, ...)", type=["xlsx"])
 professor_name = st.text_input("Enter Professor's Full Name")
 
-if st.button("Get Publications"):
+if st.button("Scrape Publications"):
     if not uploaded_file:
         st.error("Please upload the Excel file containing professor names and Scholar IDs.")
     elif not professor_name.strip():
