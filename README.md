@@ -1,6 +1,5 @@
 # 🧠 Individual-Research-Profile-Generation (Version 2.0)
 
-📄 **Web App:** [LIVE on Streamlit](https://academic-scrapper-intelligenz-talks.streamlit.app/)  
 🧾 **Based on:** [Original Version 1.0 by Sanskriti1102](https://github.com/Sanskriti1102/Individual-Research-Profile-Generation)
 
 ---
@@ -27,10 +26,10 @@ Academic data is spread, scattered, and painful to retrieve — especially acros
 
 Upload an Excel file with the following format:
 
-| Name           | Scholar ID     | Affiliation    |
-|----------------|----------------|----------------|
-| John Doe       | abcDefGhIjK    | MIT            |
-| Jane Smith     | qRsTuVwXyZ     | Stanford       |
+| Name           | Scholar ID     | 
+|----------------|----------------|
+| John Doe       | abcDefGhIjK    | 
+| Jane Smith     | qRsTuVwXyZ     | 
 
 - Scholar ID is the `user=` part from a Google Scholar profile URL  
 - You can add any number of rows
@@ -82,26 +81,20 @@ pip install -r requirements.txt
 streamlit run Scrapper.py
 📦 requirements.txt
 
-txt
-Copy
-Edit
 streamlit
 selenium
 openpyxl
+
 🔧 apt-packages.txt
 
-txt
-Copy
-Edit
 chromium-chromedriver
 chromium-browser
+
 🧠 Chrome is invoked headlessly using:
 
-python
-Copy
-Edit
 options.binary_location = '/usr/bin/chromium-browser'
 self.driver = Chrome(executable_path='/usr/bin/chromedriver', options=options)
+
 📈 Current Limitations
 
 ⚠️ Requires scholar IDs to be present in the uploaded Excel
