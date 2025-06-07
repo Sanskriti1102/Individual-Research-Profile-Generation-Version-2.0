@@ -89,12 +89,12 @@ def fetch_scholar_id(professor_name, excel_path):
 
 
 # --- Streamlit UI ---
-st.title("Google Scholar Profile Scraper")
+st.title("Google Scholar Academic Profile Scraper")
 
 uploaded_file = st.file_uploader("Upload Excel with Professors (Name, Scholar ID, ...)", type=["xlsx"])
 professor_name = st.text_input("Enter Professor's Full Name")
 
-if st.button("Scrape Publications"):
+if st.button("Get Results"):
     if not uploaded_file:
         st.error("Please upload the Excel file containing professor names and Scholar IDs.")
     elif not professor_name.strip():
@@ -118,7 +118,7 @@ if st.button("Scrape Publications"):
                     scraper.run(output_path)
 
                     # Show success + download button
-                    st.success(f"Scraping completed for {professor_name}!")
+                    st.success(f"Results for {professor_name}!")
                     with open(output_path, "rb") as f:
                         st.download_button(
                             label="Download Publications Excel",
