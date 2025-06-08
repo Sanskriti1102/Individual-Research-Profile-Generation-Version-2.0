@@ -87,9 +87,23 @@ def fetch_scholar_id(professor_name, excel_path):
     wb.close()
     return scholar_id
 
-
+# --- Logo Banner at the Top ---
+st.image("images/itlogo.png", width=150)
 # --- Streamlit UI ---
 st.title("Google Scholar Academic Profile Scraper")
+
+# --- Footer ---
+col1, col2 = st.columns([1, 6])
+with col1:
+    st.image("images/ski.png", width=30)
+with col2:
+    st.markdown(
+        "<span style='font-size: 0.9rem;'>Coded by <strong>Sanskriti Kadam</strong></span>",
+        unsafe_allow_html=True
+    )
+
+
+
 
 uploaded_file = st.file_uploader("Upload Excel with Professors (Name, Scholar ID, ...)", type=["xlsx"])
 professor_name = st.text_input("Enter Professor's Full Name")
