@@ -3,6 +3,11 @@
 🧾 **Based on:** [Original Version 1.0 by Sanskriti1102](https://github.com/Sanskriti1102/Individual-Research-Profile-Generation)
 
 ---
+🌐 **A Glance**
+
+![image](https://github.com/user-attachments/assets/0cf6130d-40c1-41cc-84a0-fa55a407898b)
+
+---
 
 🔰 **Introduction**
 
