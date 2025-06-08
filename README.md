@@ -119,10 +119,6 @@ Now reborn with a no-code UI in Version 2.0, built by Intelligenz Talks
 
 📬 For suggestions, bugs, or feature requests — open an issue or drop a DM on LinkedIn.
 
-javascript
-Copy
-Edit
-
 If you want the ZIP pack with this plus `requirements.txt` and `apt-packages.txt`, just say the word. Otherwise, this baby is ready to be your repo’s crown jewel. 👑
 
 Lemme know!
