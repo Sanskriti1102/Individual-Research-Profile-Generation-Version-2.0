@@ -95,10 +95,10 @@ st.title("Google Scholar Academic Profile Scraper")
 # --- Footer ---
 col1, col2 = st.columns([1, 6])
 with col1:
-    st.image("images/ski.png", width=30)
+    st.image("images/ski.png", width=100)
 with col2:
     st.markdown(
-        "<span style='font-size: 0.9rem;'>Coded by <strong>Sanskriti Kadam</strong></span>",
+        "<span style='font-size: 0.9rem;'>Coded by <strong>Sanskriti Kadam</strong><br>Founder & Director of IntelligenZ Talks</br></span>",
         unsafe_allow_html=True
     )
 
