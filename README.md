@@ -1,6 +1,10 @@
 # 🧠 Individual-Research-Profile-Generation (Version 2.0)
 
 🧾 **Based on:** [Original Version 1.0 by Sanskriti1102](https://github.com/Sanskriti1102/Individual-Research-Profile-Generation)
+---
+## 🚨 Detailed Video of Explaination Only on Youtube: [Watch Now]()
+![image](https://github.com/user-attachments/assets/31654c88-f246-4964-9c61-e9756fcca950)
+
 
 ---
 🌐 **A Glance**
